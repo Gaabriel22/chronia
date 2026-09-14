@@ -1,0 +1,7 @@
+@theme {
+  --color-ink: #05060a;
+  --color-starlight: #f3f0e8;
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-reading: Georgia, 'Times New Roman', serif;
+  --spacing-page: clamp(1.25rem, 4vw, 4rem);
+}

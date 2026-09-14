@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@import '@chronia/visual-language/tokens.css';
+
+@layer base {
+  html {
+    background: var(--color-ink);
+    color: var(--color-starlight);
+    font-family: var(--font-reading);
+  }
+}

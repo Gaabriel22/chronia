@@ -1,0 +1,10 @@
+.codex
+.next
+**/next-env.d.ts
+coverage
+dist
+node_modules
+playwright-report
+test-results
+apps/web/public/media
+Prompt — História.md

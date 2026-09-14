@@ -1,0 +1,19 @@
+{
+  "name": "@chronia/studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "build": "remotion bundle src/index.ts --out-dir dist",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@chronia/chronology": "workspace:*",
+    "@chronia/visual-language": "workspace:*",
+    "@remotion/cli": "4.0.524",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.524"
+  }
+}
