@@ -13,15 +13,15 @@
 
 ## 2. Visual Language and Semantic Shell
 
-- [ ] 2.1 Define Tailwind v4 `@theme` color, typography, spacing, layering, breakpoint, and motion tokens with typed equivalents in `packages/visual-language`
-- [ ] 2.2 Select, license-check, self-host, and configure the editorial display and reading typefaces with stable fallback metrics
-- [ ] 2.3 Create global document styles for color scheme, fluid typography, focus visibility, selection, zoom and reflow, and high-contrast compatibility
-- [ ] 2.4 Build the Server Component page shell with skip link, landmarks, ordered chapter navigation, main narrative article, and footer
-- [ ] 2.5 Add static metadata, canonical configuration, language declaration, robots directives, sitemap, icons, and Open Graph baseline
-- [ ] 2.6 Select appropriate Schema.org types from final visible content and verified author data, then add valid server-rendered JSON-LD without invented properties
-- [ ] 2.7 Add component tests for landmark structure, heading order, navigation names, focus behavior, and metadata output
-- [ ] 2.8 Run the checkpoint format, lint, type, unit, accessibility, and production-build gates
-- [ ] 2.9 Create the semantic-shell checkpoint commit
+- [x] 2.1 Define Tailwind v4 `@theme` color, typography, spacing, layering, breakpoint, and motion tokens with typed equivalents in `packages/visual-language`
+- [x] 2.2 Select, license-check, self-host, and configure the editorial display and reading typefaces with stable fallback metrics
+- [x] 2.3 Create global document styles for color scheme, fluid typography, focus visibility, selection, zoom and reflow, and high-contrast compatibility
+- [x] 2.4 Build the Server Component page shell with skip link, landmarks, ordered chapter navigation, main narrative article, and footer
+- [x] 2.5 Add static metadata, canonical configuration, language declaration, robots directives, sitemap, icons, and Open Graph baseline
+- [x] 2.6 Select appropriate Schema.org types from final visible content and verified author data, then add valid server-rendered JSON-LD without invented properties
+- [x] 2.7 Add component tests for landmark structure, heading order, navigation names, focus behavior, and metadata output
+- [x] 2.8 Run the checkpoint format, lint, type, unit, accessibility, and production-build gates
+- [x] 2.9 Create the semantic-shell checkpoint commit
 
 ## 3. Historical Research and Content Model
 

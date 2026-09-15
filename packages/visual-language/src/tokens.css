@@ -1,7 +1,35 @@
-@theme {
-  --color-ink: #05060a;
-  --color-starlight: #f3f0e8;
-  --font-display: Georgia, 'Times New Roman', serif;
-  --font-reading: Georgia, 'Times New Roman', serif;
+@theme static {
+  --color-ink: #07070a;
+  --color-surface: #101116;
+  --color-mist: #aaa6a0;
+  --color-starlight: #f4efe6;
+  --color-ember: #e8a36a;
+  --color-aurora: #9cc8bb;
   --spacing-page: clamp(1.25rem, 4vw, 4rem);
+  --spacing-section: clamp(5rem, 14vw, 12rem);
+  --breakpoint-narrow: 30rem;
+  --breakpoint-wide: 90rem;
+  --z-content: 10;
+  --z-navigation: 40;
+  --z-overlay: 60;
+  --ease-cosmic-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-cosmic-exit: cubic-bezier(0.7, 0, 0.84, 0);
+  --animate-slow-pulse: slow-pulse 9s var(--ease-cosmic-enter) infinite alternate;
+
+  @keyframes slow-pulse {
+    from {
+      opacity: 0.28;
+      transform: scale(0.92);
+    }
+
+    to {
+      opacity: 0.54;
+      transform: scale(1.08);
+    }
+  }
+}
+
+@theme inline {
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-reading: var(--font-manrope), 'Segoe UI', sans-serif;
 }

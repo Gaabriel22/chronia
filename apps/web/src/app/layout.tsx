@@ -1,12 +1,11 @@
-import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 
+import { createMetadata, getSiteUrl } from '@/lib/seo'
+
+import { displayFont, readingFont } from './fonts'
 import './global.css'
 
-export const metadata: Metadata = {
-  title: 'Chronia — Uma história visual do tempo',
-  description: 'Do Big Bang à formação da Terra em uma narrativa temporal interativa.',
-}
+export const metadata = createMetadata(getSiteUrl())
 
 interface RootLayoutProps {
   children: ReactNode
@@ -14,8 +13,8 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="pt-BR">
-      <body>{children}</body>
+    <html className={`${displayFont.variable} ${readingFont.variable}`} lang="pt-BR">
+      <body className="bg-ink font-reading text-starlight antialiased">{children}</body>
     </html>
   )
 }

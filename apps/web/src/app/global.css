@@ -3,8 +3,39 @@
 
 @layer base {
   html {
+    color-scheme: dark;
     background: var(--color-ink);
-    color: var(--color-starlight);
-    font-family: var(--font-reading);
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    min-width: 20rem;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--color-ember);
+    color: var(--color-ink);
+  }
+
+  :where(a, button, input, select, textarea, summary):focus-visible {
+    scroll-margin-block: 6rem;
+  }
+
+  :target {
+    scroll-margin-block: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (forced-colors: active) {
+  :where(a, button, input, select, textarea, summary):focus-visible {
+    outline: 2px solid CanvasText;
   }
 }
