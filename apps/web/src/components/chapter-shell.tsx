@@ -23,12 +23,22 @@ export function ChapterShell({ chapter, index }: ChapterShellProps) {
           <p className="text-ember mb-8 text-xs font-semibold tracking-[0.24em] uppercase">
             {chapter.eyebrow}
           </p>
+          <p className="text-mist mb-5 text-sm tracking-[0.08em] uppercase">
+            {chapter.temporal.displayLabel}
+          </p>
           <h2 className="font-display text-[clamp(3.5rem,9vw,8.5rem)] leading-[0.82] font-medium tracking-[-0.055em] text-balance">
             {chapter.title}
           </h2>
           <p className="text-mist mt-9 max-w-xl text-base leading-8 text-pretty sm:text-lg">
-            {chapter.introduction}
+            {chapter.narrative}
           </p>
+          <a
+            aria-label={`Consultar fontes e incerteza de ${chapter.title}`}
+            className="text-ember focus-visible:outline-ember mt-7 inline-flex min-h-11 items-center border-b border-current text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-4"
+            href={`#fontes-${chapter.id}`}
+          >
+            Fontes e incerteza
+          </a>
         </div>
 
         <div className="relative mx-auto aspect-square w-full max-w-sm" aria-hidden="true">

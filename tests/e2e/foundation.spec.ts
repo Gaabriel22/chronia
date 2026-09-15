@@ -63,3 +63,20 @@ test('renders canonical metadata and crawlable SEO resources', async ({ page, re
   expect(sitemapResponse.ok()).toBe(true)
   expect(await sitemapResponse.text()).toContain('<loc>http://localhost:3000/</loc>')
 })
+
+test.describe('without JavaScript', () => {
+  test.use({ javaScriptEnabled: false })
+
+  test('keeps source and uncertainty records available', async ({ page }) => {
+    await page.goto('/')
+
+    const sourcePanel = page.getByRole('region', { name: 'Fontes e incerteza' })
+    await expect(sourcePanel).toBeVisible()
+
+    const earthSources = page.locator('#fontes-terra')
+    await earthSources.locator('summary').click()
+    await expect(
+      earthSources.getByRole('link', { name: 'Geologic Time: Age of the Earth' }),
+    ).toBeVisible()
+  })
+})

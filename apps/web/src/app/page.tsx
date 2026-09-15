@@ -1,7 +1,8 @@
 import { ChapterShell } from '@/components/chapter-shell'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
-import { chapterShellContent } from '@/content/chapters'
+import { SourcePanel } from '@/components/source-panel'
+import { chapterShellContent, chroniaPrelude, chroniaScenes } from '@/content/chapters'
 import { createStructuredData, getSiteUrl, serializeStructuredData } from '@/lib/seo'
 
 export default function HomePage() {
@@ -16,7 +17,7 @@ export default function HomePage() {
         Pular para a história
       </a>
 
-      <SiteHeader chapters={chapterShellContent} />
+      <SiteHeader chapters={chapterShellContent} prelude={chroniaPrelude} />
 
       <main className="px-page" id="historia" tabIndex={-1}>
         <article aria-label="Da origem do universo à Terra">
@@ -24,6 +25,7 @@ export default function HomePage() {
             <ChapterShell chapter={chapter} index={index} key={chapter.id} />
           ))}
         </article>
+        <SourcePanel scenes={chroniaScenes} />
       </main>
 
       <SiteFooter />

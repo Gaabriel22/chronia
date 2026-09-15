@@ -27,4 +27,17 @@ describe('Chronia semantic shell', () => {
     expect(document.activeElement).toBe(skipLink)
     expect(skipLink.getAttribute('href')).toBe('#historia')
   })
+
+  it('exposes source and uncertainty records without client-side JavaScript', () => {
+    render(<HomePage />)
+
+    const sourcePanel = screen.getByRole('region', { name: 'Fontes e incerteza' })
+    expect(within(sourcePanel).getAllByRole('link', { hidden: true })).toHaveLength(7)
+    expect(within(sourcePanel).getByText(/incerteza inferior a 1%/i)).toBeTruthy()
+
+    const sourceLink = screen.getByRole('link', {
+      name: 'Consultar fontes e incerteza de O princípio',
+    })
+    expect(sourceLink.getAttribute('href')).toBe('#fontes-big-bang')
+  })
 })

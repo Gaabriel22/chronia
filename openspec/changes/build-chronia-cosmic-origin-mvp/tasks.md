@@ -25,17 +25,17 @@
 
 ## 3. Historical Research and Content Model
 
-- [ ] 3.1 Define typed immutable contracts for temporal ranges, precision, sources, uncertainty, accessibility content, media references, renderer kinds, scale segments, and scene records
-- [ ] 3.2 Write failing unit tests for duplicate scene IDs, invalid ordering, unsafe integers, invalid temporal ranges, unsupported renderers, missing sources, and missing accessibility content
-- [ ] 3.3 Implement the smallest build-time scene validator that satisfies the model tests and reports scene-specific failures
-- [ ] 3.4 Establish the documented source-evaluation workflow and citation record format for scientific and historical claims
-- [ ] 3.5 Research and record authoritative sources for the Big Bang, early expansion, first stars and galaxies, Solar System formation, and Earth formation
-- [ ] 3.6 Write concise Portuguese scene copy with approximate language and uncertainty matching the reviewed sources
-- [ ] 3.7 Create validated scene records for the editorial prelude and five MVP chapters without importing presentation components
-- [ ] 3.8 Add a source and uncertainty panel that is usable without JavaScript and links every released factual claim to its records
-- [ ] 3.9 Add tests proving a new valid scene record enters chronology without modification to the core registry consumer
-- [ ] 3.10 Run the checkpoint format, lint, type, unit, accessibility, and build gates
-- [ ] 3.11 Create the historical-content checkpoint commit
+- [x] 3.1 Define typed immutable contracts for temporal ranges, precision, sources, uncertainty, accessibility content, media references, renderer kinds, scale segments, and scene records
+- [x] 3.2 Write failing unit tests for duplicate scene IDs, invalid ordering, unsafe integers, invalid temporal ranges, unsupported renderers, missing sources, and missing accessibility content
+- [x] 3.3 Implement the smallest build-time scene validator that satisfies the model tests and reports scene-specific failures
+- [x] 3.4 Establish the documented source-evaluation workflow and citation record format for scientific and historical claims
+- [x] 3.5 Research and record authoritative sources for the Big Bang, early expansion, first stars and galaxies, Solar System formation, and Earth formation
+- [x] 3.6 Write concise Portuguese scene copy with approximate language and uncertainty matching the reviewed sources
+- [x] 3.7 Create validated scene records for the editorial prelude and five MVP chapters without importing presentation components
+- [x] 3.8 Add a source and uncertainty panel that is usable without JavaScript and links every released factual claim to its records
+- [x] 3.9 Add tests proving a new valid scene record enters chronology without modification to the core registry consumer
+- [x] 3.10 Run the checkpoint format, lint, type, unit, accessibility, and build gates
+- [x] 3.11 Create the historical-content checkpoint commit
 
 ## 4. Temporal Lens
 
