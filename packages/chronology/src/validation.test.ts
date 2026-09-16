@@ -21,7 +21,7 @@ const validScene: SceneRecord = {
   temporal: {
     startYearsBeforePresent: 13_800_000_000,
     endYearsBeforePresent: 13_800_000_000,
-    displayLabel: 'há cerca de 13,8 bilhões de anos',
+    displayLabel: { 'pt-BR': 'há cerca de 13,8 bilhões de anos' },
     precision: 'approximate',
   },
   scaleSegment: 'cosmic',
@@ -52,7 +52,7 @@ describe('validateScenes', () => {
         temporal: {
           startYearsBeforePresent: 4_540_000_000,
           endYearsBeforePresent: 4_540_000_000,
-          displayLabel: 'há cerca de 4,54 bilhões de anos',
+          displayLabel: { 'pt-BR': 'há cerca de 4,54 bilhões de anos' },
           precision: 'approximate',
         },
       }),

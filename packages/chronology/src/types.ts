@@ -4,11 +4,16 @@ export type RendererKind = (typeof rendererKinds)[number]
 export type TemporalPrecision = 'exact' | 'approximate' | 'range'
 export type ScaleSegmentId = 'cosmic' | 'planetary'
 export type SourceKind = 'primary' | 'institutional' | 'scholarly'
+export type SupportedLocale = 'pt-BR'
+
+export interface AuthoredTimeLabels {
+  readonly 'pt-BR': string
+}
 
 export interface TemporalRange {
   readonly startYearsBeforePresent: number
   readonly endYearsBeforePresent: number
-  readonly displayLabel: string
+  readonly displayLabel: AuthoredTimeLabels
   readonly precision: TemporalPrecision
 }
 
@@ -53,4 +58,22 @@ export interface SceneRecord {
   readonly sources: readonly SourceRecord[]
   readonly accessibility: AccessibilityContent
   readonly media?: MediaReference
+}
+
+export interface TemporalScaleSegment {
+  readonly id: ScaleSegmentId
+  readonly label: string
+  readonly explanation: string
+  readonly startYearsBeforePresent: number
+  readonly endYearsBeforePresent: number
+  readonly scrollWeight: number
+}
+
+export interface TemporalPosition {
+  readonly id: string
+  readonly title: string
+  readonly label: string
+  readonly scale: ScaleSegmentId
+  readonly scaleLabel: string
+  readonly progress: number
 }

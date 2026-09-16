@@ -1,3 +1,5 @@
+import { getAuthoredTimeLabel } from '@chronia/chronology'
+
 import type { ChapterShellContent } from '@/content/chapters'
 
 interface ChapterShellProps {
@@ -15,7 +17,9 @@ export function ChapterShell({ chapter, index }: ChapterShellProps) {
 
   return (
     <section
-      className="border-starlight/10 py-section grid min-h-svh scroll-mt-12 items-center border-t"
+      className="border-starlight/10 py-section grid min-h-svh scroll-mt-40 items-center border-t"
+      data-scene-id={chapter.id}
+      data-temporal-scene
       id={chapter.id}
     >
       <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(18rem,0.72fr)] lg:gap-24">
@@ -24,7 +28,7 @@ export function ChapterShell({ chapter, index }: ChapterShellProps) {
             {chapter.eyebrow}
           </p>
           <p className="text-mist mb-5 text-sm tracking-[0.08em] uppercase">
-            {chapter.temporal.displayLabel}
+            {getAuthoredTimeLabel(chapter.temporal, 'pt-BR')}
           </p>
           <h2 className="font-display text-[clamp(3.5rem,9vw,8.5rem)] leading-[0.82] font-medium tracking-[-0.055em] text-balance">
             {chapter.title}

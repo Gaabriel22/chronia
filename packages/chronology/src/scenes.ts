@@ -13,7 +13,7 @@ export const chroniaScenes = createChronology([
     temporal: {
       startYearsBeforePresent: 13_800_000_000,
       endYearsBeforePresent: 13_800_000_000,
-      displayLabel: 'há cerca de 13,8 bilhões de anos',
+      displayLabel: { 'pt-BR': 'há cerca de 13,8 bilhões de anos' },
       precision: 'approximate',
     },
     scaleSegment: 'cosmic',
@@ -39,7 +39,7 @@ export const chroniaScenes = createChronology([
     temporal: {
       startYearsBeforePresent: 13_800_000_000,
       endYearsBeforePresent: 13_800_000_000,
-      displayLabel: 'há cerca de 13,8 bilhões de anos',
+      displayLabel: { 'pt-BR': 'há cerca de 13,8 bilhões de anos' },
       precision: 'approximate',
     },
     scaleSegment: 'cosmic',
@@ -65,7 +65,7 @@ export const chroniaScenes = createChronology([
     temporal: {
       startYearsBeforePresent: 13_800_000_000,
       endYearsBeforePresent: 13_799_620_000,
-      displayLabel: 'dos primeiros instantes a cerca de 380 mil anos depois',
+      displayLabel: { 'pt-BR': 'dos primeiros instantes a cerca de 380 mil anos depois' },
       precision: 'approximate',
     },
     scaleSegment: 'cosmic',
@@ -91,7 +91,7 @@ export const chroniaScenes = createChronology([
     temporal: {
       startYearsBeforePresent: 13_700_000_000,
       endYearsBeforePresent: 13_400_000_000,
-      displayLabel: 'entre cerca de 100 e 400 milhões de anos após o Big Bang',
+      displayLabel: { 'pt-BR': 'entre cerca de 100 e 400 milhões de anos após o Big Bang' },
       precision: 'range',
     },
     scaleSegment: 'cosmic',
@@ -117,7 +117,7 @@ export const chroniaScenes = createChronology([
     temporal: {
       startYearsBeforePresent: 4_600_000_000,
       endYearsBeforePresent: 4_570_000_000,
-      displayLabel: 'há cerca de 4,6 bilhões de anos',
+      displayLabel: { 'pt-BR': 'há cerca de 4,6 bilhões de anos' },
       precision: 'approximate',
     },
     scaleSegment: 'planetary',
@@ -143,7 +143,7 @@ export const chroniaScenes = createChronology([
     temporal: {
       startYearsBeforePresent: 4_540_000_000,
       endYearsBeforePresent: 4_500_000_000,
-      displayLabel: 'há cerca de 4,54 bilhões de anos',
+      displayLabel: { 'pt-BR': 'há cerca de 4,54 bilhões de anos' },
       precision: 'approximate',
     },
     scaleSegment: 'planetary',

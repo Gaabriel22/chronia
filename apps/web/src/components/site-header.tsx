@@ -9,7 +9,12 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ chapters, prelude }: SiteHeaderProps) {
   return (
-    <header className="px-page relative isolate flex min-h-svh flex-col overflow-hidden">
+    <header
+      className="px-page relative isolate flex min-h-svh flex-col overflow-hidden"
+      data-scene-id={prelude.id}
+      data-temporal-scene
+      id={prelude.id}
+    >
       <div
         className="bg-ember/20 animate-slow-pulse absolute top-[8%] left-[58%] -z-10 size-[min(58vw,42rem)] rounded-full blur-[120px] motion-reduce:animate-none"
         aria-hidden="true"

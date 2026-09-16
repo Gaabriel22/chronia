@@ -1,4 +1,4 @@
-import type { SceneRecord } from '@chronia/chronology'
+import { getAuthoredTimeLabel, type SceneRecord } from '@chronia/chronology'
 
 interface SourcePanelProps {
   scenes: readonly SceneRecord[]
@@ -30,7 +30,7 @@ export function SourcePanel({ scenes }: SourcePanelProps) {
                 <span>
                   <span className="block font-semibold">{scene.title}</span>
                   <span className="text-mist mt-1 block text-sm">
-                    {scene.temporal.displayLabel}
+                    {getAuthoredTimeLabel(scene.temporal, 'pt-BR')}
                   </span>
                 </span>
                 <span aria-hidden="true" className="text-ember text-xl group-open:rotate-45">

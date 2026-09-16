@@ -39,15 +39,15 @@
 
 ## 4. Temporal Lens
 
-- [ ] 4.1 Write failing tests for canonical time conversion, deterministic progress, boundary values, monotonic ordering, and cosmic-to-planetary scale transitions
-- [ ] 4.2 Implement named piecewise scale segments and pure temporal mapping functions with authored scroll weights
-- [ ] 4.3 Implement locale-aware authored time labels without parsing labels for calculations
-- [ ] 4.4 Build the server-rendered temporal indicator with active scale, time label, direction toward the present, and explanatory copy
-- [ ] 4.5 Add the client enhancement that updates the visual indicator without frame-by-frame screen-reader announcements
-- [ ] 4.6 Add a complete ordered textual alternative for visual temporal distance and scale changes
-- [ ] 4.7 Test boundary transitions, browser resizing, direct fragment navigation, no-JavaScript output, and non-visual chronology
-- [ ] 4.8 Run the checkpoint format, lint, type, unit, accessibility, browser, and build gates
-- [ ] 4.9 Create the temporal-lens checkpoint commit
+- [x] 4.1 Write failing tests for canonical time conversion, deterministic progress, boundary values, monotonic ordering, and cosmic-to-planetary scale transitions
+- [x] 4.2 Implement named piecewise scale segments and pure temporal mapping functions with authored scroll weights
+- [x] 4.3 Implement locale-aware authored time labels without parsing labels for calculations
+- [x] 4.4 Build the server-rendered temporal indicator with active scale, time label, direction toward the present, and explanatory copy
+- [x] 4.5 Add the client enhancement that updates the visual indicator without frame-by-frame screen-reader announcements
+- [x] 4.6 Add a complete ordered textual alternative for visual temporal distance and scale changes
+- [x] 4.7 Test boundary transitions, browser resizing, direct fragment navigation, no-JavaScript output, and non-visual chronology
+- [x] 4.8 Run the checkpoint format, lint, type, unit, accessibility, browser, and build gates
+- [x] 4.9 Create the temporal-lens checkpoint commit
 
 ## 5. Scrollytelling Engine
 

@@ -2,6 +2,7 @@ import { ChapterShell } from '@/components/chapter-shell'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { SourcePanel } from '@/components/source-panel'
+import { TemporalLens } from '@/components/temporal-lens'
 import { chapterShellContent, chroniaPrelude, chroniaScenes } from '@/content/chapters'
 import { createStructuredData, getSiteUrl, serializeStructuredData } from '@/lib/seo'
 
@@ -18,6 +19,8 @@ export default function HomePage() {
       </a>
 
       <SiteHeader chapters={chapterShellContent} prelude={chroniaPrelude} />
+
+      <TemporalLens scenes={chroniaScenes} />
 
       <main className="px-page" id="historia" tabIndex={-1}>
         <article aria-label="Da origem do universo à Terra">

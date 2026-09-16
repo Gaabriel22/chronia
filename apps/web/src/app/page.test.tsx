@@ -40,4 +40,22 @@ describe('Chronia semantic shell', () => {
     })
     expect(sourceLink.getAttribute('href')).toBe('#fontes-big-bang')
   })
+
+  it('renders a complete temporal lens before client enhancement', () => {
+    render(<HomePage />)
+
+    const lens = screen.getByRole('complementary', { name: 'Lente temporal' })
+    expect(within(lens).getByText('Escala cósmica')).toBeTruthy()
+    expect(within(lens).getByText('em direção ao presente')).toBeTruthy()
+    expect(within(lens).getByText(/espaço visual muda de escala/i)).toBeTruthy()
+    expect(within(lens).queryByRole('status')).toBeNull()
+
+    const chronology = within(lens).getByRole('list', { name: 'Cronologia completa' })
+    expect(within(chronology).getAllByRole('listitem')).toHaveLength(6)
+    expect(
+      within(chronology)
+        .getByRole('link', { name: /A Terra/i })
+        .getAttribute('href'),
+    ).toBe('#terra')
+  })
 })

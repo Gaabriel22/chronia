@@ -1,4 +1,5 @@
 export * from './scenes'
 export * from './sources'
+export * from './temporal-scale'
 export * from './types'
 export * from './validate-scenes'

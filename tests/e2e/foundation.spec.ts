@@ -64,6 +64,29 @@ test('renders canonical metadata and crawlable SEO resources', async ({ page, re
   expect(await sitemapResponse.text()).toContain('<loc>http://localhost:3000/</loc>')
 })
 
+test('updates the temporal lens across scale boundaries and viewport changes', async ({ page }) => {
+  await page.goto('/#sistema-solar')
+
+  const lens = page.getByTestId('temporal-lens-visual')
+  await expect(page.locator('#sistema-solar')).toBeInViewport()
+  await expect(lens).toHaveAttribute('data-active-scene', 'sistema-solar')
+  await expect(lens).toContainText('Escala planetária')
+
+  await page.setViewportSize({ width: 720, height: 860 })
+  await page.locator('#big-bang').scrollIntoViewIfNeeded()
+  await expect(lens).toHaveAttribute('data-active-scene', 'big-bang')
+  await expect(lens).toContainText('Escala cósmica')
+})
+
+test('keeps the visual indicator silent for assistive technology', async ({ page }) => {
+  await page.goto('/')
+
+  const temporalLens = page.getByRole('complementary', { name: 'Lente temporal' })
+  await expect(temporalLens).toBeAttached()
+  await expect(temporalLens.locator('[aria-live]')).toHaveCount(0)
+  await expect(page.getByTestId('temporal-lens-visual')).toHaveAttribute('aria-hidden', 'true')
+})
+
 test.describe('without JavaScript', () => {
   test.use({ javaScriptEnabled: false })
 
@@ -78,5 +101,20 @@ test.describe('without JavaScript', () => {
     await expect(
       earthSources.getByRole('link', { name: 'Geologic Time: Age of the Earth' }),
     ).toBeVisible()
+  })
+
+  test('keeps the complete chronology available as text', async ({ page }) => {
+    await page.goto('/')
+
+    const temporalLens = page.getByRole('complementary', { name: 'Lente temporal' })
+    await temporalLens.getByText('Como esta escala funciona').click()
+
+    const chronology = temporalLens.getByRole('list', { name: 'Cronologia completa' })
+    await expect(chronology.getByRole('listitem')).toHaveCount(6)
+    await expect(chronology.getByRole('link', { name: 'A Terra' })).toHaveAttribute(
+      'href',
+      '#terra',
+    )
+    await expect(chronology).toContainText('Escala: planetária')
   })
 })

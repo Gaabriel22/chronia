@@ -22,7 +22,7 @@ function createScene(id: string, order: number, yearsBeforePresent: number): Sce
     temporal: {
       startYearsBeforePresent: yearsBeforePresent,
       endYearsBeforePresent: yearsBeforePresent,
-      displayLabel: `há ${yearsBeforePresent} anos`,
+      displayLabel: { 'pt-BR': `há ${yearsBeforePresent} anos` },
       precision: 'approximate',
     },
     scaleSegment: 'cosmic',
