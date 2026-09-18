@@ -58,4 +58,28 @@ describe('Chronia semantic shell', () => {
         .getAttribute('href'),
     ).toBe('#terra')
   })
+
+  it('renders every scene as a semantic section with a visual fallback', () => {
+    const { container } = render(<HomePage />)
+    const scenes = Array.from(container.querySelectorAll<HTMLElement>('section[data-scene-id]'))
+
+    expect(scenes.map(({ id }) => id)).toEqual([
+      'preludio',
+      'big-bang',
+      'expansao',
+      'primeiras-luzes',
+      'sistema-solar',
+      'terra',
+    ])
+
+    for (const scene of scenes) {
+      const visual = scene.querySelector('figure[data-scene-visual]')
+      const description = visual?.querySelector('figcaption')?.textContent
+
+      expect(scene.getAttribute('aria-labelledby')).toBeTruthy()
+      expect(scene.querySelector('[data-scene-copy]')).toBeTruthy()
+      expect(visual).toBeTruthy()
+      expect(description?.trim()).not.toBe('')
+    }
+  })
 })

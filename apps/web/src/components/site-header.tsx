@@ -1,6 +1,7 @@
 import type { ChapterShellContent } from '@/content/chapters'
 
 import { ChapterNavigation } from './chapter-navigation'
+import { SceneVisualFallback } from './scene-visual-fallback'
 
 interface SiteHeaderProps {
   chapters: readonly ChapterShellContent[]
@@ -9,21 +10,7 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ chapters, prelude }: SiteHeaderProps) {
   return (
-    <header
-      className="px-page relative isolate flex min-h-svh flex-col overflow-hidden"
-      data-scene-id={prelude.id}
-      data-temporal-scene
-      id={prelude.id}
-    >
-      <div
-        className="bg-ember/20 animate-slow-pulse absolute top-[8%] left-[58%] -z-10 size-[min(58vw,42rem)] rounded-full blur-[120px] motion-reduce:animate-none"
-        aria-hidden="true"
-      />
-      <div
-        className="border-starlight/10 absolute -top-72 left-1/2 -z-10 aspect-square w-[min(95vw,70rem)] -translate-x-1/2 rounded-full border"
-        aria-hidden="true"
-      />
-
+    <header className="px-page relative isolate flex min-h-svh flex-col overflow-hidden">
       <div className="border-starlight/10 flex items-center justify-between border-b py-6 text-xs tracking-[0.18em] uppercase">
         <a className="font-semibold" href="#topo" aria-label="Chronia, início">
           Chronia
@@ -31,12 +18,24 @@ export function SiteHeader({ chapters, prelude }: SiteHeaderProps) {
         <p className="text-mist">Escala: cósmica</p>
       </div>
 
-      <div className="flex flex-1 items-center py-20 sm:py-28">
-        <div className="max-w-6xl">
+      <section
+        aria-labelledby="preludio-heading"
+        className="relative isolate flex flex-1 scroll-mt-40 items-center py-20 sm:py-28"
+        data-enhanced-scene
+        data-scene-id={prelude.id}
+        data-temporal-scene
+        id={prelude.id}
+      >
+        <SceneVisualFallback index={0} scene={prelude} variant="prelude" />
+
+        <div className="max-w-6xl" data-scene-copy>
           <p className="text-ember mb-8 text-xs font-semibold tracking-[0.28em] uppercase">
             {prelude.eyebrow}
           </p>
-          <h1 className="font-display text-[clamp(5.5rem,19vw,15rem)] leading-[0.68] font-medium tracking-[-0.075em]">
+          <h1
+            className="font-display text-[clamp(5.5rem,19vw,15rem)] leading-[0.68] font-medium tracking-[-0.075em]"
+            id="preludio-heading"
+          >
             Chronia
           </h1>
           <div className="mt-12 grid gap-8 md:grid-cols-[minmax(0,34rem)_auto] md:items-end md:gap-20">
@@ -59,7 +58,7 @@ export function SiteHeader({ chapters, prelude }: SiteHeaderProps) {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <ChapterNavigation chapters={chapters} />
     </header>

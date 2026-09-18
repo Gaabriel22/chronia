@@ -51,17 +51,17 @@
 
 ## 5. Scrollytelling Engine
 
-- [ ] 5.1 Render every scene as a semantic Server Component section with stable fragment ID, date, heading, narrative, source access, visual slot, and fallback
-- [ ] 5.2 Write browser tests for native wheel, touch-equivalent, keyboard, scrollbar, chapter-link, forward, and reverse navigation behavior
-- [ ] 5.3 Implement a small Client Component that progressively imports GSAP and ScrollTrigger only when full-motion enhancement is allowed
-- [ ] 5.4 Implement one local GSAP context and optional ScrollTrigger timeline per enhanced scene with complete cleanup
-- [ ] 5.5 Add bounded scene activation and progress events without storing per-frame state in React
-- [ ] 5.6 Implement limited focal pinning with dynamic viewport sizing, unobscured focus, and reliable exit in both scroll directions
-- [ ] 5.7 Batch layout reads and writes and restrict per-frame DOM animation to transform and opacity
-- [ ] 5.8 Add failure tests proving readable navigation and content remain when animation imports or initialization fail
-- [ ] 5.9 Profile the baseline desktop and mobile scroll trace for layout thrashing, long tasks, and leaked triggers
-- [ ] 5.10 Run the checkpoint format, lint, type, unit, browser, accessibility, and production-build gates
-- [ ] 5.11 Create the scrollytelling-engine checkpoint commit
+- [x] 5.1 Render every scene as a semantic Server Component section with stable fragment ID, date, heading, narrative, source access, visual slot, and fallback
+- [x] 5.2 Write browser tests for native wheel, touch-equivalent, keyboard, scrollbar, chapter-link, forward, and reverse navigation behavior
+- [x] 5.3 Implement a small Client Component that progressively imports GSAP and ScrollTrigger only when full-motion enhancement is allowed
+- [x] 5.4 Implement one local GSAP context and optional ScrollTrigger timeline per enhanced scene with complete cleanup
+- [x] 5.5 Add bounded scene activation and progress events without storing per-frame state in React
+- [x] 5.6 Implement limited focal pinning with dynamic viewport sizing, unobscured focus, and reliable exit in both scroll directions
+- [x] 5.7 Batch layout reads and writes and restrict per-frame DOM animation to transform and opacity
+- [x] 5.8 Add failure tests proving readable navigation and content remain when animation imports or initialization fail
+- [x] 5.9 Profile the baseline desktop and mobile scroll trace for layout thrashing, long tasks, and leaked triggers
+- [x] 5.10 Run the checkpoint format, lint, type, unit, browser, accessibility, and production-build gates
+- [x] 5.11 Create the scrollytelling-engine checkpoint commit
 
 ## 6. Static and Interactive Visual Scenes
 

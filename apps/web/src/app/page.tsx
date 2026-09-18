@@ -1,4 +1,5 @@
 import { ChapterShell } from '@/components/chapter-shell'
+import { ScrollytellingEnhancement } from '@/components/scrollytelling-enhancement'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 import { SourcePanel } from '@/components/source-panel'
@@ -32,6 +33,8 @@ export default function HomePage() {
       </main>
 
       <SiteFooter />
+
+      <ScrollytellingEnhancement />
 
       <script
         dangerouslySetInnerHTML={{ __html: serializeStructuredData(structuredData) }}
